@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "neurotidy"
-version = "0.1.0"
+version = "1.0.0"
 description = "AI-Powered Python & Deep Learning Code Analyzer — Explain, Analyze, Optimize, and Debug your code"
 readme = "README.md"
 license = {text = "MIT"}
