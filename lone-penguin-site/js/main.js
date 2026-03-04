@@ -490,7 +490,8 @@ document.addEventListener('DOMContentLoaded', () => {
             output.innerHTML = '<span class="placeholder-text" style="color:#2dd4bf;"><span class="pulse">...</span> Contacting NeuroTidy Cloud Engine </span>';
 
             const payload = { code: code, mode: 'intermediate', use_ai: true, use_rag: true };
-            const endpoint = `https://1d21iee6x0.execute-api.us-east-1.amazonaws.com/prod/${currentMode}`;
+            const API_BASE = "__API_BASE_URL__";
+            const endpoint = `${API_BASE}/${currentMode}`;
 
             try {
                 const response = await fetch(endpoint, {
