@@ -588,7 +588,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 if (response.ok) {
-                    formStatus.textContent = 'Thank you! Your message has been sent successfully. We will get back to you soon.';
+                    formStatus.innerHTML = '<strong>Message sent!</strong> We received your inquiry and will be in touch shortly.';
                     formStatus.className = 'form-status success';
                     formStatus.style.display = 'block';
                     contactForm.reset();
