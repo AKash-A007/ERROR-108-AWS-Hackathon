@@ -400,6 +400,74 @@ a {
     box-shadow: 0 4px 15px rgba(255, 95, 86, 0.05);
 }
 
+/* Why NeuroTidy Cards */
+.why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.why-card {
+    background: rgba(26, 30, 36, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+    padding: 40px 36px;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+}
+
+.why-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-color), #8b5cf6, transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.why-card:hover {
+    border-color: rgba(168, 85, 247, 0.25);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 60px rgba(168, 85, 247, 0.06);
+}
+
+.why-card:hover::before {
+    opacity: 1;
+}
+
+.why-card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.why-card-title {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 14px;
+    color: var(--text-light);
+    letter-spacing: 0.5px;
+}
+
+.why-card-text {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .video-container video {
     position: absolute;
     top: 50%;
